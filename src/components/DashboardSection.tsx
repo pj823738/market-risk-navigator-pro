@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { TrendingUp, TrendingDown, DollarSign } from "lucide-react";
+import MarketDataTable from './MarketDataTable';
 
 const marketData = [
   { name: 'Jan', S_and_P: 4200, Portfolio: 1040, Risk: 65 },
@@ -60,7 +60,7 @@ const DashboardSection = () => {
             Real-time analytics and visualization to monitor your portfolio's risk exposure and performance metrics.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <StatsCard 
             title="Portfolio Value" 
@@ -84,7 +84,19 @@ const DashboardSection = () => {
             icon={<TrendingUp className="h-4 w-4 text-muted-foreground" />}
           />
         </div>
-        
+
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Real-time Market Data</CardTitle>
+            <CardDescription>
+              Live market prices and statistics
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <MarketDataTable />
+          </CardContent>
+        </Card>
+
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Risk Analysis</CardTitle>

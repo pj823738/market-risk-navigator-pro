@@ -9,7 +9,33 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      market_data: {
+        Row: {
+          change_percent: number | null
+          id: string
+          price: number
+          symbol: string
+          timestamp: string | null
+          volume: number | null
+        }
+        Insert: {
+          change_percent?: number | null
+          id?: string
+          price: number
+          symbol: string
+          timestamp?: string | null
+          volume?: number | null
+        }
+        Update: {
+          change_percent?: number | null
+          id?: string
+          price?: number
+          symbol?: string
+          timestamp?: string | null
+          volume?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -71,3 +71,43 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Opening the Project in VS Code
+
+To open and work with this project in Visual Studio Code:
+
+1. **Clone the Repository**
+```sh
+git clone <YOUR_GIT_URL>
+cd <YOUR_PROJECT_NAME>
+```
+
+2. **Open in VS Code**
+```sh
+# Option 1: From terminal
+code .
+
+# Option 2: Open manually through VS Code
+# - Open VS Code
+# - Go to File > Open Folder
+# - Select the project directory
+```
+
+3. **Install Dependencies**
+```sh
+npm install
+```
+
+4. **Start Development Server**
+```sh
+npm run dev
+```
+
+### Recommended VS Code Extensions
+
+For the best development experience, consider installing these extensions:
+- ESLint
+- Prettier
+- Tailwind CSS IntelliSense
+- React Developer Tools
+- GitLens

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				finance: {
+					'blue': '#143D59',
+					'darkblue': '#0F2C42',
+					'teal': '#1E7A8E',
+					'gold': '#D9A74A',
+					'light': '#F4F7FA',
+					'gray': '#808A94',
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0'
+					},
+					to: {
+						opacity: '1'
+					}
+				},
+				'slide-up': {
+					from: {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					to: {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-up': 'slide-up 0.7s ease-out forwards'
+			},
+			backgroundImage: {
+				'hero-pattern': 'linear-gradient(to right, #143D59, #1E7A8E)',
+				'card-gradient': 'linear-gradient(135deg, #F4F7FA 0%, #E5E9EE 100%)',
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
 			}
 		}
 	},
